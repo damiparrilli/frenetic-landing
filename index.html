@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frenetic Comics</title>
-    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,65 +13,68 @@
 
     <header>
         <nav class="nav-container">
-            <img src="img/header-logo.png" alt="Frenetic Comics" class="header-logo">
+            <img src="./img/header-logo.png" alt="Frenetic Comics" class="header-logo">
         </nav>
     </header>
-    <div class="banner">
+    <div id="formulario">
+        
+    </div>
+    <section class="banner">
         <div class="container">
-            <img src="img/banner-img.jpg" alt="Frenetic Comics" class="banner-img">
+            <img src="./img/banner-img.jpg" alt="Frenetic Comics" class="banner-img">
             <div class="texto-banner">
                 <h2>Adentrate en el mundo de los comics</h2>
                 <p>Recibí el mejor contenido de este ámbito y más sobre la historia de los comics.</p>
                 <div class="boton">
                     <span>¡40% de descuento al suscribirte ya!</span>
-                    <button>SUSCRIBITE AHORA</button>
+                    <button onclick="abrirFormulario()">SUSCRIBITE AHORA</button>
                 </div>
             </div>
             <div class="sombra"></div>
         </div>
 
 
-    </div>
+    </section>
     <div class="container">
-        <div class="items">
+        <section class="items">
             <div class="items-individuales">
-                <img src="img/item-img1.svg" alt="News">
+                <img src="./img/item-img1.svg" alt="News">
                 <span>Tendencias y las noticias más relevantes de la escena</span>
             </div>
             <div class="items-individuales">
-                <img src="img/item-img2.svg" alt="Sale">
+                <img src="./img/item-img2.svg" alt="Sale">
                 <span>Las mejores ofertas en comics y coleccionables</span>
             </div>
             <div class="items-individuales">
-                <img src="img/item-img3.svg" alt="Comic">
+                <img src="./img/item-img3.svg" alt="Comic">
                 <span>Curiosidades, fan-arts, posters y mucho más sobre este ambito</span>
             </div>
-        </div>
+        </section>
 
-        <div class="series">
+        <section class="series">
             <h2>Series Destacadas</h2>
             <div class="series-individuales">
                 <div class="series-items">
-                    <img src="img/img1.png" alt="Star Wars">
+                    <img src="./img/img1.png" alt="Star Wars">
                     <h3>Star Wars</h3>
                 </div>
                 <div class="series-items">
-                    <img src="img/img2.png" alt="Gears of War">
+                    <img src="./img/img2.png" alt="Gears of War">
                     <h3>Gears of War</h3>
                 </div>
                 <div class="series-items">
-                    <img src="img/img3.png" alt="Star Trek">
+                    <img src="./img/img3.png" alt="Star Trek">
                     <h3>Star Trek</h3>
                 </div>
             </div>
-        </div>
+        </section>
 
 
     </div>
     <footer>
         <div class="footer-container">
             <div class="footer-part1">
-                <img src="img/logo-footer.svg" alt="Frenetic Comics">
+                <img src="./img/logo-footer.svg" alt="Frenetic Comics">
                 <ul>
                     <li><a href="#">Acerca de nosotros</a></li>
                     <li><a href="#">Contacto</a></li>
@@ -83,19 +86,19 @@
             <div class="redes-sociales">
                 <p class="redes-sociales-title">Redes sociales</p>
                 <div class="redes-sociales-items">
-                    <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
-                    <a href="#"><img src="img/facebook.svg" alt="Facebook"></a>
-                    <a href="#"><img src="img/twitter.svg" alt="Twitter"></a>
-                    <a href="#"><img src="img/google+.svg" alt="Google+"></a>
-                    <a href="#"><img src="img/youtube.svg" alt="YouTube"></a>
-                    <a href="#"><img src="img/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#"><img src="./img/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="./img/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="./img/twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="./img/google+.svg" alt="Google+"></a>
+                    <a href="#"><img src="./img/youtube.svg" alt="YouTube"></a>
+                    <a href="#"><img src="./img/linkedin.svg" alt="LinkedIn"></a>
                 </div>
             </div>
-            
-        </div>
-        <div class="copyr">Copyright 2020 ©  Damián Parrilli</div>
-    </footer>
 
+        </div>
+        <div class="copyr">Copyright 2020 © Damián Parrilli</div>
+    </footer>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
