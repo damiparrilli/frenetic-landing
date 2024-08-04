@@ -18,13 +18,23 @@ body {
     padding: 0;
 }
 
+img{
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+
 header {
     width: 100%;
     background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
-
-
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: top 0.3s;
+    height: 75px;
 }
 
 .nav-container {
@@ -35,7 +45,8 @@ header {
 }
 
 .header-logo {
-    width: 190px;
+    width: 150px;
+    object-fit: contain;
 }
 
 .container {
@@ -90,18 +101,18 @@ header {
 }
 
 .texto-banner h2 {
-    font-size: 3rem;
+    font-size: 3em;
     margin: 0;
     padding: 0;
 }
 
 .texto-banner p {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 500;
 }
 
 .texto-banner span {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 600;
 
 }
@@ -114,13 +125,17 @@ header {
 
 .texto-banner button {
     margin-top: 10px;
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: 600;
     border: 4px solid black;
     background-color: #F3F3F3;
     padding: 10px 35px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.texto-banner button:hover {
+    filter: brightness(95%);
 }
 
 .items {
@@ -137,7 +152,7 @@ header {
 
 .items span {
     font-weight: 500;
-    font-size: 22px;
+    font-size: 1.375em;
     text-align: center;
 }
 
@@ -150,6 +165,8 @@ header {
     gap: 30px;
 }
 
+
+
 .series {
     max-width: 1160px;
     margin: auto;
@@ -157,7 +174,7 @@ header {
 }
 
 .series h2 {
-    font-size: 2.25rem;
+    font-size: 2.25em;
 }
 
 .series-individuales {
@@ -176,6 +193,11 @@ header {
     cursor: pointer;
 }
 
+.series-items:hover {
+    transform: scale(1.02);
+    transition: .2s ease-in-out;
+   }
+
 .series-items img {
     max-width: 320px;
     width: 100%;
@@ -186,7 +208,7 @@ header {
     text-align: center;
     color: white;
     padding: 20px 0;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 500;
 }
 
@@ -212,7 +234,7 @@ text-align: right;
 max-width: 1280px;
 width: 100%;
 padding-bottom: 50px;
-font-size: 1.25rem;
+font-size: 1.25em;
 padding: 0 40px 40px 0;
 }
 
@@ -231,7 +253,7 @@ padding: 0 40px 40px 0;
     display: flex;
     flex-direction: column;
     gap: 35px;
-    font-size: 1.3rem;
+    font-size: 1.3em;
 }
 
 .footer-container ul a {
@@ -247,7 +269,7 @@ padding: 0 40px 40px 0;
 
 .footer-container p {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -280,9 +302,11 @@ padding: 0 40px 40px 0;
     top: 0;
     right: 0;
     position: fixed;
-    display: grid;
-    place-items: center;
-    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
 }
 
 .formul{
@@ -302,7 +326,7 @@ padding: 0 40px 40px 0;
     width: 100%;
     height: 50px;
     padding: 10px;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 
@@ -312,7 +336,7 @@ padding: 0 40px 40px 0;
     justify-content: flex-start;
     width: 100%;
     gap: 10px;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: 500;
 }
 
@@ -358,14 +382,14 @@ padding: 0 40px 40px 0;
 }
 
 .formul p{
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: 500;
 }
 
 .formul input[type=submit]{
     width: 100%;
     padding: 15px;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     color: #ffffff;
     background-color: #101010;
     border: none;
@@ -391,6 +415,7 @@ width: 30px;
 position: absolute;
 top: 35px;
 right: 35px;
+cursor: pointer;
 }
 
 .img-form{
@@ -400,7 +425,7 @@ width: 220px;
 .bienvenida{
     width: 100%;
     padding: 60px 0;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 500;
 }
 
@@ -415,31 +440,37 @@ width: 220px;
         flex-direction: column;
     }
 
+    .overlay{
+        align-items: flex-start;
+    overflow: auto;
+    background-color: white;
+    }
+    
     .banner img {
         width: 100%;
-        height: 400px;
+        height: clamp(16.563rem, -4.675rem + 50.943vh, 25rem);
     }
 
     .sombra {
-        height: 400px;
+        height: clamp(16.563rem, -4.675rem + 50.943vh, 25rem);
     }
 
     .texto-banner {
         width: 100%;
-        padding: 35px 25px;
+        padding: 25px 25px;
         gap: 25px;
     }
 
     .texto-banner h2 {
-        font-size: 2.25rem;
+        font-size: clamp(1.8rem, 0.667rem + 2.717vh, 2.25rem);
     }
 
     .texto-banner p {
-        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 0.445rem + 1.811vh, 1.5rem);
     }
 
     .texto-banner span {
-        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 0.445rem + 1.811vh, 1.5rem);
     }
 
     .boton {
@@ -450,7 +481,7 @@ width: 220px;
 
     .texto-banner button {
 
-        font-size: 1.75rem;
+        font-size: clamp(1.4rem, 0.519rem + 2.113vh, 1.75rem);
 
     }
 
@@ -464,11 +495,11 @@ width: 220px;
     }
 
     .series h2 {
-        font-size: 2rem;
+        font-size: 2em;
     }
 
     .series-items h3 {
-        font-size: 1.25rem;
+        font-size: clamp(0.875rem, 0.446rem + 2.143vi, 1.25rem);
         padding: 20px 0;
     }
 
@@ -512,22 +543,44 @@ width: 220px;
 
     
     .texto-banner h2 {
-        font-size: clamp(2rem, 0.813rem + 3.125vi, 3rem);
+        font-size: clamp(2em, 0.813em + 3.125vi, 3em);
     }
 
     .texto-banner button {
 
-        font-size: clamp(1.5rem, -0.188rem + 3.125vi, 2rem);
+        font-size: clamp(1.5em, -0.188em + 3.125vi, 2em);
 
     }
 
     .texto-banner p {
-        font-size: clamp(1.25rem, 1.024rem + 0.595vw, 1.5rem);
+        font-size: clamp(1.25em, 1.024em + 0.595vw, 1.5em);
     }
 
     .texto-banner span {
-        font-size: clamp(1.25rem, 1.024rem + 0.595vw, 1.5rem);
+        font-size: clamp(1.25em, 1.024em + 0.595vw, 1.5em);
 
     }
 
 }
+
+@media only screen and (max-height: 750px) and (min-width: 608px) {
+ html{
+    font-size: 14px;
+ }
+
+
+ .formul{
+    font-size: 1.15em;
+ }
+}
+
+@media only screen and (min-height: 1000px) and (min-width: 608px) {
+    html{
+       font-size: 18px;
+    }
+   
+   
+    .formul{
+       font-size: 1.15em;
+    }
+   }
